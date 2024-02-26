@@ -1,10 +1,6 @@
 N = int(input())
 M = int(input())
 
-pairs_cities = []
-number_citi = {}
-numbers = list(range(N+1))
-
 
 def list_to_matrix(cities):
     ways = []
@@ -23,6 +19,10 @@ def floyd(ways):
                 ways[column][row] = min(ways[column][row], ways[column][citi]+ways[citi][row])
     return ways
 
+
+pairs_cities = []
+number_citi = {}
+numbers = list(range(N+1))
 
 for pair_cities in range(M):
     pair = input().split()
