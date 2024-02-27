@@ -1,12 +1,15 @@
-N = int(input())
+n = int(input())
 
 translation = {}
-for pairs in range(N):
-    pair = input().split()
-    translation[pair[0]] = pair[1]
+for pairs in range(n):
+    eng, ru = input().split()
+    translation[eng] = ru
 
-proposal = input().split()
 
+for word in input().split():
+    print(translation.get(word, word), end=' ')
+
+'''
 for word in proposal:
     if word in translation:
         number = proposal.index(word)
@@ -14,4 +17,4 @@ for word in proposal:
 
 for word in proposal:
     print(word, end=' ')
-    
+'''
